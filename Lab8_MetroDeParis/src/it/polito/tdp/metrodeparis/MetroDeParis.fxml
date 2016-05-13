@@ -1,7 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.BorderPane?>
-	
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.metrodeparis.MetroDeParisController">
-	<!-- TODO Add Nodes -->
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.65" fx:controller="it.polito.tdp.metrodeparis.MetroDeParisController">
+   <center>
+      <VBox prefHeight="309.0" prefWidth="309.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="113.0" text="Stazione di partenza" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="20.0" prefWidth="200.0">
+               <children>
+                  <ComboBox fx:id="cbPartenza" prefWidth="150.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="30.0" prefHeight="20.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="17.0" prefWidth="108.0" text="stazione di arrivo" />
+                  <Button fx:id="btnCcerca" mnemonicParsing="false" onAction="#doCerca" prefHeight="25.0" prefWidth="112.0" text="Cerca percorso" />
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="50.0" prefHeight="20.0" prefWidth="200.0">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <children>
+                  <ComboBox fx:id="cbArrivo" prefHeight="25.0" prefWidth="133.0" />
+               </children>
+            </HBox>
+            <TextArea fx:id="txtResult" prefHeight="200.0" prefWidth="200.0" />
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </VBox>
+   </center>
 </BorderPane>
